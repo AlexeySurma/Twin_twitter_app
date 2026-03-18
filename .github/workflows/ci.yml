@@ -23,6 +23,6 @@ jobs:
         
       - run: poetry run pytest twin_twitter_app/tests
       - run: poetry run mypy twin_twitter_app/
-      - run: black --diff --check twin_twitter_app/
-      - run: isort --check-only --diff twin_twitter_app/
-      - run: flake8 twin_twitter_app/
+      - run: poetry run black --diff --check twin_twitter_app/
+      - run: poetry run isort --check-only --diff twin_twitter_app/
+      - run: poetry run flake8 twin_twitter_app/
